@@ -11,7 +11,8 @@ const Posts = () => {
       const { data, error } = await supabase
         .from("posts")
         .select("*")
-        .eq("type", "TIL"); // TIL 타입의 게시물만 가져오도록
+        .eq("type", "BLOG") // BLOG 타입의 게시물만 가져오도록
+        .limit(3); // 최신 게시물 3개만 띄우기!!
 
       if (error) {
         console.log("error: ", error);
