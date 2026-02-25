@@ -123,3 +123,6 @@ q:after {
   content: "";
   content: none;
 }
+html {
+  scroll-behavior: smooth;
+}
