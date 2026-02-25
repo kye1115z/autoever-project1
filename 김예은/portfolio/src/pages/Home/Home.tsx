@@ -1,5 +1,6 @@
 import AboutMe from "../AbooutMe/AboutMe";
 import Career from "../Career/Career";
+import Posts from "../Posts/Posts";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div className={styles.home}>
       <AboutMe />
       <Career />
+      <Posts />
     </div>
   );
 };
