@@ -1,0 +1,11 @@
+.careerContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.career {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
