@@ -10,14 +10,10 @@ const Home = () => {
     <div className={styles.home}>
       <section id="about" className={styles.section}>
         <AboutMe />
-      </section>
-      <section id="career" className={styles.section}>
         <Career />
-      </section>
-      <section id="skills" className={styles.section}>
         <Skills />
       </section>
-      <section id="projects" className={styles.section}>
+      <section id="project" className={styles.section}>
         <Projects />
       </section>
       <section id="blog" className={styles.section}>
