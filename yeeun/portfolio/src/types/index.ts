@@ -46,3 +46,6 @@ export interface ProjectDetail {
 export interface ProjectWithDetails extends Project {
   project_details: ProjectDetail[];
 }
+
+// 경력 사항 제목 타입
+export type CareerCategory = "교육" | "어학 및 자격증" | "활동";
