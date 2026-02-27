@@ -1,0 +1,23 @@
+/* --- 내용 --- 스타일링 */
+.lineTitle {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.lineTitle span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0046ff;
+  white-space: nowrap;
+}
+
+.lineTitle::before,
+.lineTitle::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #d1d5db;
+}
