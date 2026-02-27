@@ -1,27 +1,57 @@
+import { techMap } from "../../utils/getIcon";
 import styles from "./Skills.module.css";
-import skillsData from "../../data/skills.json";
 
 const Skills = () => {
+  const selectedSkills = [
+    {
+      category: "Language",
+      techIds: ["javascript", "typescript", "java", "python"],
+    },
+    {
+      category: "Frontend",
+      techIds: ["react", "nextjs", "tailwind"],
+    },
+    {
+      category: "Backend & DB",
+      techIds: ["nodejs", "spring", "postgresql", "mysql"],
+    },
+    {
+      category: "Tools & Others",
+      techIds: ["git", "github", "docker", "figma"],
+    },
+  ];
+
   return (
     <div className={styles.skills}>
-      <h1>Skills</h1>
-      {skillsData.skills.map((group) => (
-        <section key={group.category} className={styles.section}>
-          <h2 className={styles.categoryTitle}>{group.category}</h2>
-          <hr className={styles.divider} />
+      <h1 className="section-title">Skills</h1>
+      {selectedSkills.map((group) => {
+        const techItems = group.techIds.map((name) =>
+          techMap.get(name.toLowerCase()),
+        );
 
-          <div className={styles.iconGrid}>
-            {group.items.map((item) => (
-              <div key={item.name} className={styles.skillItem}>
-                <div className={styles.iconWrapper}>
-                  <img src={item.icon_url} alt={item.name} title={item.name} />
-                </div>
-                <span className={styles.skillName}>{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
+        return (
+          <section key={group.category} className={styles.categorySection}>
+            <h2 className={styles.categoryTitle}>{group.category}</h2>
+
+            <div className={styles.iconGrid}>
+              {techItems.map(
+                (tech) =>
+                  tech && (
+                    <div key={tech.id} className={styles.skillItem}>
+                      <img
+                        key={tech.name}
+                        src={`https://cdn.simpleicons.org/${tech.icon}/${tech.color}`}
+                        alt={tech.name}
+                        className={styles.icon}
+                      />
+                      <span className={styles.skillName}>{tech.name}</span>
+                    </div>
+                  ),
+              )}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 };
