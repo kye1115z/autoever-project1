@@ -10,8 +10,12 @@ const Home = () => {
     <div className={styles.home}>
       <section id="about" className={styles.section}>
         <AboutMe />
-        <Career />
+      </section>
+      <section id="skills" className={styles.section}>
         <Skills />
+      </section>
+      <section id="career" className={styles.section}>
+        <Career />
       </section>
       <section id="project" className={styles.section}>
         <Projects />
