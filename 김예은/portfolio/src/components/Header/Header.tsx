@@ -1,6 +1,9 @@
 import styles from "./Header.module.css";
 
 const Header = () => {
+  // 여기는 지금 홈 내에서 스크롤 되는 애들로 처리되고 있지만
+  // 나중에 라우팅 방식이 되어야 한다.
+  // 홈 내에서 스크롤 되는 것들은 따로 floating을 띄울 예정.
   const handleNavClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -14,13 +17,13 @@ const Header = () => {
           className={styles.navLink}
           onClick={() => handleNavClick("about")}
         >
-          About me
+          Home
         </button>
         <button
           className={styles.navLink}
           onClick={() => handleNavClick("project")}
         >
-          Project
+          Projects
         </button>
         <button
           className={styles.navLink}
@@ -30,9 +33,9 @@ const Header = () => {
         </button>
         <button
           className={styles.navLink}
-          onClick={() => handleNavClick("contacts")}
+          onClick={() => handleNavClick("guestbook")}
         >
-          Contacts
+          GuestBook
         </button>
       </nav>
     </header>
