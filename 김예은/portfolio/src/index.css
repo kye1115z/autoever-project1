@@ -133,3 +133,9 @@ q:after {
 html {
   scroll-behavior: smooth;
 }
+
+/* 여기부터는 프로젝트에 필요한 컴포넌트의 전역 설정 */
+.section-title {
+  font-size: 4rem;
+  font-weight: bolder;
+}
