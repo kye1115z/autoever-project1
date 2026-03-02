@@ -24,20 +24,37 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
+  const leftPosts = posts.slice(0, 2);
+  const rightPost = posts[2];
+
   return (
-    <div className={styles.posts}>
-      {posts &&
-        posts.map((post) => (
-          <div key={post.id} className={styles.post}>
-            <h1>Studay Note</h1>
-            <div className={styles.postContent}>
-              <p>{post.title}</p>
+    <section className={styles.section}>
+      <h1 className="section-title">Study Note</h1>
+
+      <div className={styles.posts}>
+        {/* 왼쪽 컬럼 (2개) */}
+        <div className={styles.leftColumn}>
+          {leftPosts.map((post) => (
+            <article key={post.id} className={styles.post}>
+              <h2>{post.title}</h2>
               <p>{post.summary}</p>
-              <button>→ Read More</button>
-            </div>
+              <button className={styles.more}>→ details</button>
+            </article>
+          ))}
+        </div>
+
+        {/* 오른쪽 컬럼 (1개) */}
+        {rightPost && (
+          <div className={styles.rightColumn}>
+            <article className={styles.post}>
+              <h2>{rightPost.title}</h2>
+              <p>{rightPost.summary}</p>
+              <button className={styles.more}>→ details</button>
+            </article>
           </div>
-        ))}
-    </div>
+        )}
+      </div>
+    </section>
   );
 };
 
