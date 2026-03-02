@@ -1,0 +1,64 @@
+.projectCard {
+  all: unset; /* 버튼 리셋 */
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 290px;
+  min-width: 290px;
+  max-width: 390px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projectCard img {
+  width: 100%;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.projectInfo h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subInfo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.subInfo span {
+  font-size: 14px;
+}
+
+.date {
+  color: #6b7280;
+}
+
+.team {
+  color: #0046ff;
+  background: rgba(0, 70, 255, 0.1);
+}
+
+.personal {
+  color: #34c759;
+  background: rgba(52, 199, 89, 0.1);
+}
+
+.summary {
+  font-size: 14px;
+  color: #374151;
+}
+
+.techStacks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.techStacks img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
