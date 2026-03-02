@@ -1,42 +1,29 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header = () => {
-  // 여기는 지금 홈 내에서 스크롤 되는 애들로 처리되고 있지만
-  // 나중에 라우팅 방식이 되어야 한다.
-  // 홈 내에서 스크롤 되는 것들은 따로 floating을 띄울 예정.
-  const handleNavClick = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <header className={styles.header}>
-      <h1>김예은의 포트폴리오</h1>
+      <NavLink to="/" className={styles.logo}>
+        김예은의 포트폴리오
+      </NavLink>
+
       <nav className={styles.nav}>
-        <button
-          className={styles.navLink}
-          onClick={() => handleNavClick("about")}
-        >
+        <NavLink to="/" className={styles.navLink}>
           Home
-        </button>
-        <button
-          className={styles.navLink}
-          onClick={() => handleNavClick("project")}
-        >
+        </NavLink>
+
+        <NavLink to="/projects" className={styles.navLink}>
           Projects
-        </button>
-        <button
-          className={styles.navLink}
-          onClick={() => handleNavClick("blog")}
-        >
+        </NavLink>
+
+        <NavLink to="/blog" className={styles.navLink}>
           Blog
-        </button>
-        <button
-          className={styles.navLink}
-          onClick={() => handleNavClick("guestbook")}
-        >
+        </NavLink>
+
+        <NavLink to="/guestbook" className={styles.navLink}>
           GuestBook
-        </button>
+        </NavLink>
       </nav>
     </header>
   );
