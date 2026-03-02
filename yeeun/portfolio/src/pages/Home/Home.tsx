@@ -1,4 +1,5 @@
 import FloatingContact from "../../components/Contact/FloatingContact";
+import FloatingSectionNav from "../../components/FloatingSectionNav/FloatingSectionNav";
 import Footer from "../../components/Footer/Footer";
 import AboutMe from "../AbooutMe/AboutMe";
 import Career from "../Career/Career";
@@ -10,13 +11,14 @@ import styles from "./Home.module.css";
 const Home = () => {
   return (
     <div className={styles.home}>
+      <FloatingSectionNav />
       <section id="about" className={styles.section}>
         <AboutMe />
       </section>
       <section id="skills" className={styles.section}>
         <Skills />
       </section>
-      <section id="career" className={styles.section}>
+      <section id="experience" className={styles.section}>
         <Career />
       </section>
       <section id="project" className={styles.section}>
