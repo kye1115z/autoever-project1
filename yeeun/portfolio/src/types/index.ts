@@ -17,6 +17,7 @@ export interface Post {
   title: string;
   slug: string;
   summary: string;
+  content: string;
   type: PostType;
   views?: number;
   created_at: string | Date;
