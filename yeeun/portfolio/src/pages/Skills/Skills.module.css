@@ -25,7 +25,8 @@
 .iconGrid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem 3rem;
   width: 80%;
 }
 

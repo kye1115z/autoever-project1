@@ -35,3 +35,19 @@
   color: #0046ff;
   transform: translateX(-4px);
 }
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .floatingNav {
+    right: -90px; /* 숨겨뒀다가 */
+    transition:
+      right 0.3s ease,
+      opacity 0.3s ease;
+    opacity: 0.6;
+  }
+
+  .floatingNav:hover {
+    right: 20px; /* 호버하면 등장 */
+    opacity: 1;
+  }
+}

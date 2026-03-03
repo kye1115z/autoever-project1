@@ -23,3 +23,55 @@
   flex-direction: column;
   gap: 4rem;
 }
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .career {
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .careerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .careerContents {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .left {
+    width: 100%;
+    gap: 2rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .career {
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .careerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .careerContents {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .left {
+    gap: 2rem;
+    width: 100%;
+  }
+}

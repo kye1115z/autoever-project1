@@ -110,3 +110,27 @@
     align-items: stretch;
   }
 }
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr;
+    /* padding: 0 1.5rem; */
+  }
+
+  .rightColumn {
+    align-items: stretch;
+  }
+
+  /* 양쪽 카드 기울기를 제거하고 디자인을 똑같이 통일 */
+  .leftColumn .post,
+  .rightColumn .post {
+    transform: none;
+    box-shadow: 0px 20px 30px rgba(14, 30, 37, 0.12);
+  }
+
+  .post {
+    max-width: 100%;
+    padding: 2rem;
+  }
+}
