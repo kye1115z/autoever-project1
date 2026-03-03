@@ -31,7 +31,9 @@ export interface Project {
   thumbnail_url?: string | null;
   is_team?: boolean | null;
   summary: string;
-  tech_stacks?: string | null;
+  slug: string;
+  project_stacks: string[];
+  project_details: ProjectDetail[];
   created_at: string | Date;
 }
 

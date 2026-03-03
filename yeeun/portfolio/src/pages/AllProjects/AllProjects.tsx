@@ -15,9 +15,20 @@ const AllProjects = () => {
     const fetchProjects = async () => {
       setLoading(true);
 
+      // 프로젝트 기술 스택 조인해서 가져오기
       const { data, error } = await supabase
         .from("projects")
-        .select("*")
+        .select(
+          `
+            *,
+            project_stacks (
+              tech_stacks (
+                id,
+                name
+              )
+            )
+          `,
+        )
         .order("start_date", { ascending: false });
 
       if (error) {
@@ -42,12 +53,12 @@ const AllProjects = () => {
         {projects.map((project) => {
           // project에서 받아온 데이터 중 tech_stacks를 문자열 배열로 변환
           const techNames =
-            project.tech_stacks?.split(",").map((t) => t.trim()) || [];
+            project.project_stacks?.map((ps: any) => ps.tech_stacks.name) ?? [];
 
           // tecjNames와 일치하는 아이콘 정보를 techMap에서 찾기
           const techDetails = techNames
             .map((name) => techMap.get(name.toLowerCase()))
-            .filter((tech): tech is TechDetail => tech !== undefined); // undefined 제거
+            .filter((tech): tech is TechDetail => tech !== undefined);
 
           return (
             <ProjectsContent

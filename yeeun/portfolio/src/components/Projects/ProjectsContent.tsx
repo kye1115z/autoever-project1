@@ -1,6 +1,6 @@
 import styles from "./ProjectsContent.module.css";
 import type { Project } from "../../types";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export type TechDetail = {
   id: string;
@@ -18,7 +18,7 @@ type Props = {
 const ProjectsContent = ({ project, techDetails, variant = "home" }: Props) => {
   return (
     <Link
-      to={`/projects/${project.id}`}
+      to={`/projects/${project.slug}`}
       className={`${styles.projectCard} ${
         variant === "home" ? styles.home : styles.all
       }`}
@@ -50,7 +50,6 @@ const ProjectsContent = ({ project, techDetails, variant = "home" }: Props) => {
               src={`https://cdn.simpleicons.org/${tech.icon}/${tech.color}`}
               alt={tech.name}
               title={tech.name}
-              className={styles.techIcon}
             />
           ))}
         </div>
