@@ -1,5 +1,3 @@
-// components/FloatingSectionNav.tsx
-
 import styles from "./FloatingSectionNav.module.css";
 
 const sections = [
