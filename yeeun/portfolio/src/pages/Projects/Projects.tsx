@@ -6,6 +6,7 @@ import { techMap } from "../../utils/getIcon";
 import ProjectsContent, {
   type TechDetail,
 } from "../../components/Projects/ProjectsContent";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -62,7 +63,9 @@ const Projects = () => {
         })}
       </div>
       {/* TODO: 버튼 클릭 시 전체 페이지로 넘어게끔 */}
-      <button className={styles.viewAllProjects}>→ View All Projects</button>
+      <Link to={`projects`} className={styles.viewAllProjects}>
+        → View All Projects
+      </Link>
     </div>
   );
 };
