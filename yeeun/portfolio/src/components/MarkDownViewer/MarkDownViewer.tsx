@@ -3,14 +3,14 @@ import remarkGfm from "remark-gfm";
 import rehypeSanitize from "rehype-sanitize";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
-import styles from "./MarkdownViewer.module.css";
+import styles from "./MarkDownViewer.module.css";
 
 interface Props {
   content: string;
 }
 
 // 마크다운 텍스트를 ReactMarkdown 라이브러리로 렌더링
-export default function MarkdownViewer({ content }: Props) {
+export default function MarkDownViewer({ content }: Props) {
   return (
     <div className={styles.markdownBody}>
       <ReactMarkdown
