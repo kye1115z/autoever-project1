@@ -7,10 +7,9 @@
 }
 
 .projectList {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -19,4 +18,18 @@
   text-align: center;
   color: #0046ff;
   cursor: pointer;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .projectList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .projectList {
+    grid-template-columns: 1fr;
+  }
 }

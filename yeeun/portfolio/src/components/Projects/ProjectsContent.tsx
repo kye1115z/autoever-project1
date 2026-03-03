@@ -1,5 +1,6 @@
 import styles from "./ProjectsContent.module.css";
 import type { Project } from "../../types";
+import { Link, useNavigate } from "react-router-dom";
 
 export type TechDetail = {
   id: string;
@@ -11,15 +12,17 @@ export type TechDetail = {
 type Props = {
   project: Project;
   techDetails: TechDetail[];
+  variant?: "home" | "all"; // 컴포넌트를 어디서 불렀는지에 따라 이미지 비율 조정하기 위해
 };
 
-const ProjectsContent = ({ project, techDetails }: Props) => {
-  const handleClick = () => {
-    console.log("project id:", project.id);
-  };
-
+const ProjectsContent = ({ project, techDetails, variant = "home" }: Props) => {
   return (
-    <button type="button" className={styles.projectCard} onClick={handleClick}>
+    <Link
+      to={`/projects/${project.id}`}
+      className={`${styles.projectCard} ${
+        variant === "home" ? styles.home : styles.all
+      }`}
+    >
       <img
         // TODO: DB or 기본값
         // src={project.thumbnail_url ?? "/assets/default_project.svg"}
@@ -52,7 +55,7 @@ const ProjectsContent = ({ project, techDetails }: Props) => {
           ))}
         </div>
       </div>
-    </button>
+    </Link>
   );
 };
 
