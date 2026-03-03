@@ -135,7 +135,51 @@ html {
 }
 
 /* 여기부터는 프로젝트에 필요한 컴포넌트의 전역 설정 */
+/* 섹션 타이틀 */
 .section-title {
   font-size: 4rem;
   font-weight: bolder;
+}
+
+/* 뒤로가기 버튼 */
+/* 버튼 */
+.backBtn {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+
+  color: #0046ff;
+  background-color: #f0f5ff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+  background-color: #0046ff;
+  color: #ffffff;
+  border-color: #0046ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 70, 255, 0.2);
+}
+
+.backBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 70, 255, 0.1);
+}
+
+.backBtn::before {
+  content: "←";
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.backBtn:hover::before {
+  transform: translateX(-3px); /* 호버 시 화살표가 왼쪽으로 움찔 */
 }
