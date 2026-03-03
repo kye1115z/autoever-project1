@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@uiw/react-md-editor": "^4.0.11"
+    "@uiw/react-md-editor": "^4.0.11",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1"
   }
 }
