@@ -6,6 +6,15 @@
   border-radius: 0.5rem;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 프로젝트 카드에 호버 효과 */
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .projectCard img {
@@ -33,6 +42,12 @@
 .projectInfo h2 {
   font-size: 20px;
   font-weight: bold;
+}
+
+/* 호버 시. 프로젝트 카드 타이틀 색상 변경 */
+.projectCard:hover h2 {
+  color: #0046ff;
+  transition: color 0.2s ease;
 }
 
 .subInfo {

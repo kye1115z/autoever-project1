@@ -82,3 +82,54 @@
 .backBtn:hover::before {
   transform: translateX(-3px); /* 호버 시 화살표가 왼쪽으로 움찔 */
 }
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .blogDetail {
+    width: 85%;
+    padding: 4rem 0;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .infoBox {
+    padding-bottom: 2rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .blogDetail {
+    width: 100%;
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 🔥 핵심: 세로 배치 */
+  .infoBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .author,
+  .views {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+
+  .backBtn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

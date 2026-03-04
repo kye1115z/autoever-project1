@@ -15,8 +15,29 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .allProjects {
+    width: 90%;
+    padding: 3rem 2rem;
+    gap: 3rem;
+  }
+
   .projectList {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 태블릿부터 한 줄 */
+    gap: 2rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .allProjects {
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .projectList {
+    gap: 1.5rem;
   }
 }
