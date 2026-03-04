@@ -9,15 +9,32 @@ const Skills = () => {
     },
     {
       category: "Frontend",
-      techIds: ["react", "nextjs", "tailwind"],
+      techIds: [
+        "react",
+        "nextjs",
+        "tailwind",
+        "bootstrap",
+        "styled-components",
+        "react-query",
+        "recoil",
+        "redux",
+        "vercel",
+      ],
     },
     {
       category: "Backend & DB",
-      techIds: ["nodejs", "spring", "postgresql", "mysql"],
+      techIds: [
+        "express",
+        "nodejs",
+        "spring",
+        "postgresql",
+        "mysql",
+        "supabase",
+      ],
     },
     {
       category: "Tools & Others",
-      techIds: ["git", "github", "docker", "figma"],
+      techIds: ["git", "github", "notion", "docker", "figma", "expo"],
     },
   ];
 
