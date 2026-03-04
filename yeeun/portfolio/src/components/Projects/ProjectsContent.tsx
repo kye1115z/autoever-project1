@@ -25,8 +25,8 @@ const ProjectsContent = ({ project, techDetails, variant = "home" }: Props) => {
     >
       <img
         // TODO: DB or 기본값
-        // src={project.thumbnail_url ?? "/assets/default_project.svg"}
-        src="/assets/images/default_project.svg"
+        src={project.thumbnail_url ?? "/assets/default_project.svg"}
+        // src="/assets/images/default_project.svg"
         alt={project.title}
       />
       <div className={styles.projectInfo}>
