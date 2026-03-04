@@ -8,7 +8,7 @@ interface Props {
   type: "ALL" | "BLOG" | "TIL";
 }
 
-const BlogContent = ({ post, type }: Props) => {
+const BlogContent = ({ post }: Props) => {
   return (
     <Link to={`/blog/${post.slug}`} className={styles.blogContent}>
       <h2 className={styles.title}>{post.title}</h2>
