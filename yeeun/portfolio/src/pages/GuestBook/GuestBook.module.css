@@ -1,0 +1,12 @@
+.guestbook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10rem 0;
+  gap: 4rem;
+}
+
+.guestbook img {
+  width: 200px;
+}
