@@ -15,7 +15,7 @@ const BlogContent = ({ post, type }: Props) => {
       <p className={styles.summary}>{post.summary}</p>
       <div className={styles.bottomData}>
         <span>{formatRelativeDate(post.created_at)}</span>
-        <span>{type}</span>
+        <span>{post.type}</span>
       </div>
     </Link>
   );
